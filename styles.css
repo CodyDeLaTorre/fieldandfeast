@@ -1,7 +1,10 @@
 /* CSS BY  Cody De La Torre */
+
+/* IMPORTED FONTS */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* CSS RESET */
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -50,13 +53,77 @@ table {
 	border-spacing: 0;
 }
 
-Colors
-midnight-blue: #1F2A44;
-olive-green: #76885B;
-champagne-gold: #E5C185;
-linen: #F8F4EC;
-dark-charcoal: #2B2B2B;
-soft-white: #FAF9F6;
+/* ROOT VARIABLES */
+:root {
+  --midnight-blue: #1F2A44;
+  --olive-green: #76885B;
+  --champagne-gold: #E5C185;
+  --linen: #F8F4EC;
+  --dark-charcoal: #2B2B2B;
+  --soft-white: #FAF9F6;
 
-Font
-Playfair Display
+  --font-display: 'Playfair Display', serif;
+
+  --radius: 10px;
+  --shadow: 0 4px 10px rgba(31, 42, 68, 0.15);
+}
+
+/* GLOBAL STYLES (mobile first/small) */
+body {
+  font-family: var(--font-display);
+  color: var(--dark-charcoal);
+  background-color: var(--linen);
+  line-height: 1.6;
+}
+
+.container {
+  padding: 0 1.25rem;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
+header {
+  background-color: var(--midnight-blue);
+  color: var(--soft-white);
+  text-align: center;
+  padding: 2rem 0;
+}
+
+header .logo {
+  width: 110px;
+  margin: 0 auto 1rem;
+}
+
+header h1 {
+  font-size: 2rem;
+  font-weight: 900;
+  margin-bottom: 0.5rem;
+}
+
+header .tagline {
+  font-style: italic;
+  font-size: 0.95rem;
+}
+
+nav {
+  background-color: var(--champagne-gold);
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem 0;
+}
+
+nav a {
+  color: var(--midnight-blue);
+  font-weight: 700;
+  font-size: 0.95rem;
+}
